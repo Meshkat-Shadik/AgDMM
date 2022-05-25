@@ -37,10 +37,20 @@ dependencies:
   flutter_zoom_drawer: ^2.3.1+1
   syncfusion_flutter_pdfviewer: ^19.4.38-beta
   url_launcher: ^6.0.20
+  easy_localization: ^3.0.0
+  hydrated_bloc: ^8.0.0
+  path_provider: ^2.0.9
+  flutter_bloc: ^8.0.1
+  freezed_annotation: ^1.1.0
+  injectable: ^1.5.3
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: null
+  freezed: ^1.1.1
+  injectable_generator: ^1.5.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -63,6 +73,7 @@ flutter:
   assets:
     - assests/images/
     - assests/docs/
+    - assests/translations/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

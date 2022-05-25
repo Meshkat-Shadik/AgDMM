@@ -1,8 +1,36 @@
+import 'package:agdmm_design/injection.dart';
+import 'package:agdmm_design/language_cubit.dart';
 import 'package:agdmm_design/screens/my_home_page.dart';
+import 'package:agdmm_design/translations/codegen_loader.g.dart';
+import 'package:agdmm_design/translations/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:injectable/injectable.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  final storage = await HydratedStorage.build(
+    storageDirectory: await getApplicationDocumentsDirectory(), //path_provider
+  );
+  configureInjection(Environment.prod);
+  HydratedBlocOverrides.runZoned(
+    () => runApp(
+      EasyLocalization(
+          path: 'assests/translations',
+          supportedLocales: const [
+            Locale('en'),
+            Locale('bn'),
+          ],
+          fallbackLocale: const Locale('en'),
+          assetLoader: CodegenLoader(),
+          child: const MyApp()),
+    ),
+    storage: storage,
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,14 +38,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'MavenPro',
+    return BlocProvider(
+      create: (context) => getIt<LanguageCubit>(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        title: LocaleKeys.title_text.tr(),
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: MyHomePage(title: LocaleKeys.title_text.tr()),
       ),
-      home: const MyHomePage(),
     );
   }
 }

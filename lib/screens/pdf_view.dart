@@ -1,5 +1,7 @@
 import 'package:agdmm_design/constants.dart';
+import 'package:agdmm_design/language_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 /// Represents Homepage for Navigation
@@ -19,15 +21,27 @@ class _PdfViewWidget extends State<PdfViewWidget> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: darkPurpleColor,
         title: const Text('Help Notes'),
       ),
-      body: SfPdfViewer.asset(
-        'assests/docs/help_line.pdf',
-        key: _pdfViewerKey,
+      body: BlocBuilder<LanguageCubit, bool>(
+        builder: (context, state) {
+          return SfPdfViewer.asset(
+            state
+                ? 'assests/docs/help_line_bangla.pdf'
+                : 'assests/docs/help_line.pdf',
+            key: _pdfViewerKey,
+          );
+        },
       ),
     );
   }

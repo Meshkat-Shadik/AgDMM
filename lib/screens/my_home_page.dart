@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  String? title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
