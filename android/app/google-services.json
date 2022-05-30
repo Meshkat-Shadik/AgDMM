@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "607726849152",
+    "firebase_url": "https://soil-monitoring-system-d52a5-default-rtdb.firebaseio.com",
+    "project_id": "soil-monitoring-system-d52a5",
+    "storage_bucket": "soil-monitoring-system-d52a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607726849152:android:5b31dd5e72f6180f4d6a65",
+        "android_client_info": {
+          "package_name": "com.example.agdmm_design"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607726849152-iblip8a597bqpn264slbeud4fkg2d7bm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agdmm_design",
+            "certificate_hash": "70587194cc4364b4d00420e4c6898f7161fbf864"
+          }
+        },
+        {
+          "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjOL40zD5joI980R09fMcz61Mrvp6Myds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607726849152:android:a195f1508e702bd74d6a65",
+        "android_client_info": {
+          "package_name": "com.example.mock_img_recognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjOL40zD5joI980R09fMcz61Mrvp6Myds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607726849152:android:c510e08b414fba034d6a65",
+        "android_client_info": {
+          "package_name": "com.example.realtime_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjOL40zD5joI980R09fMcz61Mrvp6Myds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607726849152-nu4avm0t9361ksslo8nfp947jc33juek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

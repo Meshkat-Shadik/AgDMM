@@ -1,11 +1,18 @@
+import 'dart:io';
+
 import 'package:agdmm_design/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class DiseaseInfo extends StatelessWidget {
-  const DiseaseInfo({Key? key, required this.diseaseTitle}) : super(key: key);
+  const DiseaseInfo({
+    Key? key,
+    required this.diseaseTitle,
+    this.imageFile,
+  }) : super(key: key);
 
   final String diseaseTitle;
+  final File? imageFile;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +33,7 @@ class DiseaseInfo extends StatelessWidget {
             pinned: true,
             floating: true,
             delegate: SliverImageHeader(
-              imgUrl: '$formattedText.jpg',
-            ),
+                imgUrl: '$formattedText.jpg', fileImg: imageFile),
           ),
           SliverToBoxAdapter(
             child: Container(
@@ -73,16 +79,19 @@ class DiseaseInfo extends StatelessWidget {
 
 class SliverImageHeader extends SliverPersistentHeaderDelegate {
   final String imgUrl;
+  final File? fileImg;
 
-  SliverImageHeader({required this.imgUrl});
+  SliverImageHeader({required this.imgUrl, this.fileImg});
 
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Image.asset(
-      'assests/images/$imgUrl',
-      fit: BoxFit.fill,
-    );
+    return fileImg == null
+        ? Image.asset(
+            'assests/images/$imgUrl',
+            fit: BoxFit.fill,
+          )
+        : Image.file(fileImg!);
   }
 
   @override

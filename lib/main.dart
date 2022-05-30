@@ -4,6 +4,7 @@ import 'package:agdmm_design/screens/my_home_page.dart';
 import 'package:agdmm_design/translations/codegen_loader.g.dart';
 import 'package:agdmm_design/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -13,6 +14,7 @@ import 'package:path_provider/path_provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await Firebase.initializeApp();
   final storage = await HydratedStorage.build(
     storageDirectory: await getApplicationDocumentsDirectory(), //path_provider
   );
@@ -26,7 +28,7 @@ void main() async {
             Locale('bn'),
           ],
           fallbackLocale: const Locale('en'),
-          assetLoader: CodegenLoader(),
+          assetLoader: const CodegenLoader(),
           child: const MyApp()),
     ),
     storage: storage,

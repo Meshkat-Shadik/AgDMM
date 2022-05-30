@@ -44,6 +44,12 @@ dependencies:
   freezed_annotation: ^1.1.0
   injectable: ^1.5.3
   get_it: ^7.2.0
+  tflite: ^1.1.2
+  firebase_core: ^1.17.1
+  firebase_database: ^9.0.15
+  toggle_switch: ^2.0.1
+  image_picker: ^0.8.4
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +80,7 @@ flutter:
     - assests/images/
     - assests/docs/
     - assests/translations/
+    - assests/tflite/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,6 @@
 import 'package:agdmm_design/screens/contact.dart';
 import 'package:agdmm_design/screens/pdf_view.dart';
+import 'package:agdmm_design/widgets/contact_model.dart';
 import 'package:flutter/material.dart';
 
 import 'package:agdmm_design/constants.dart';
@@ -66,17 +67,21 @@ class _MenuScreenState extends State<MenuScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ContactSir(
-                                name: 'Dr. S.M. Taohidul Islam',
-                                desig: 'Professor',
-                                faculty:
-                                    'Faculty of Computer Science and Engineering',
-                                vname:
-                                    'Patuakhali Science and Technology University',
-                                bName: 'Contact',
-                                email: 'staohidul@yahoo.com',
-                                img: 'assests/images/sir.png',
-                                phone: '01719-018370',
+                              builder: (context) => ContactSir(
+                                dataList: [
+                                  Contact(
+                                    name: 'Dr. S.M. Taohidul Islam',
+                                    desig: 'Professor',
+                                    faculty:
+                                        'Faculty of Computer Science and Engineering',
+                                    vname:
+                                        'Patuakhali Science and Technology University',
+                                    bName: 'Contact',
+                                    email: 'staohidul@yahoo.com',
+                                    img: 'assests/images/sir.png',
+                                    phone: '01719-018370',
+                                  ),
+                                ],
                               ),
                             ),
                           );
@@ -84,17 +89,33 @@ class _MenuScreenState extends State<MenuScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ContactSir(
-                                name: 'Mahmudul Hasan Sumon',
-                                desig: 'Student',
-                                faculty:
-                                    'Faculty of Computer Science and Engineering',
-                                vname:
-                                    'Patuakhali Science and Technology University',
-                                bName: 'About Me',
-                                email: 'sumoon14@cse.pstu.ac.bd',
-                                img: 'assests/images/me.png',
-                                phone: '01832-852963',
+                              builder: (context) => ContactSir(
+                                dataList: [
+                                  Contact(
+                                    name: 'Mahmudul Hasan Sumon',
+                                    desig: 'Student',
+                                    faculty:
+                                        'Faculty of Computer Science and Engineering',
+                                    vname:
+                                        'Patuakhali Science and Technology University',
+                                    bName: 'About Us',
+                                    email: 'sumoon14@cse.pstu.ac.bd',
+                                    img: 'assests/images/me.png',
+                                    phone: '01832852963',
+                                  ),
+                                  Contact(
+                                    name: 'Hasibul Hasan Ankur',
+                                    desig: 'Student',
+                                    faculty:
+                                        'Faculty of Computer Science and Engineering',
+                                    vname:
+                                        'Patuakhali Science and Technology University',
+                                    bName: 'About Us',
+                                    email: 'ankur14@cse.pstu.ac.bd',
+                                    img: 'assests/images/ankur.jpg',
+                                    phone: '01521423870',
+                                  ),
+                                ],
                               ),
                             ),
                           );

@@ -23,7 +23,7 @@ var itemList = <MyListItems>[
   MyListItems(title: 'Contact', leadingIcon: const Icon(Icons.phone, size: 25)),
   MyListItems(title: 'Help', leadingIcon: const Icon(Icons.help, size: 25)),
   MyListItems(
-      title: 'About Me', leadingIcon: const Icon(Icons.person, size: 25)),
+      title: 'About Us', leadingIcon: const Icon(Icons.person, size: 25)),
 ];
 
 const myTextStyle = TextStyle(
@@ -60,7 +60,7 @@ const juteDiseases = [
 const wheatDiseases = [
   'Leaf Rust of Wheat',
   'Loose Smut of Wheat',
-  'Powdery Milidew of Wheat',
+  'Powdery Mildew of Wheat',
   'Stem Rust of Wheat',
   'Tan Spot of Wheat',
 ];

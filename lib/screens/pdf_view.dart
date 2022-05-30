@@ -22,7 +22,6 @@ class _PdfViewWidget extends State<PdfViewWidget> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 

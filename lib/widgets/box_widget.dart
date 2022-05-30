@@ -74,6 +74,7 @@ class BoxWidget extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => DiseaseInfo(
                               diseaseTitle: diseaseList[index],
+                              imageFile: null,
                             ),
                           ),
                         );
